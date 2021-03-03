@@ -1,3 +1,14 @@
+@mixin mobile {
+  @media screen and (max-width: #{$mobile-width}) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media screen and (min-width: #{$mobile-width}) {
+    @content;
+  }
+}
+
 @mixin textCenter {
   text-align: center;
 }
@@ -13,11 +24,7 @@
 //   font-size: 16px;
 //   line-height: 30px;
 // }
-@mixin mobile {
-  @media (max-width: $mobile) {
-    @content;
-  }
-}
+
 @mixin flexCenter($direction) {
   display: flex;
   justify-content: center;
@@ -27,9 +34,7 @@
 @mixin restItem($direction) {
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-direction: $direction;
-  margin: 5px auto;
 }
 @mixin btn {
   padding: 15px 25px 15px 25px;

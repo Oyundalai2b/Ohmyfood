@@ -34,122 +34,348 @@ p {
   font-size: small;
 }
 
-main.container {
-  display: flex;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+@media screen and (max-width: 479px) {
+  main.container {
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  main.container input[type=button] {
+    padding: 15px 25px 15px 25px;
+    border-radius: 30px;
+    background: linear-gradient(#ff79da, #9356dc);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    border: none;
+    background-color: #9356dc;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  main.container section.location {
+    padding: 15px;
+    background-color: #eaeaea;
+    width: 100%;
+    text-align: center;
+    color: #000000;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    box-shadow: 8px 4px 0 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  main.container section.explore {
+    width: 100%;
+    background-color: #f6f6f6;
+    padding: 20px 20px 40px 20px;
+    text-align: center;
+  }
+  main.container section.explore h1 {
+    line-height: 70px;
+  }
+  main.container section.explore p {
+    color: #000000;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 10px 0 30px 0;
+  }
+  main.container section.guide {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px 40px 20px;
+    width: 100%;
+  }
+  main.container section.guide h1 {
+    text-align: left;
+  }
+  main.container section.guide .guide-item {
+    background-color: #f6f6f6;
+    color: #000000;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    box-shadow: 0px 4px 8px 0 rgba(129, 126, 126, 0.2), 0 6px 20px 0 rgba(122, 120, 120, 0.19);
+    border-radius: 20px;
+    width: 100%;
+    padding: 25px 20px 25px 30px;
+    margin: 10px 0 10px 0;
+  }
+  main.container section.guide .guide-item a {
+    text-decoration: none;
+    color: #000000;
+    padding-left: 20px;
+  }
+  main.container section.guide .guide-item span.fa-stack {
+    position: absolute;
+    left: 0px;
+  }
+  main.container section.guide .guide-item .fa-stack .fa-circle {
+    color: #9356dc;
+    font-size: 22px;
+    line-height: 20px;
+  }
+  main.container section.guide .guide-item .fa-stack .fa-stack-1x {
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 20px;
+    font-family: "Roboto";
+    font-weight: 500;
+  }
+  main.container section.guide .guide-item .guide-icon {
+    color: #919191;
+  }
+  main.container section.guide .guide-item:hover {
+    background-color: #f5edff;
+  }
+  main.container section.guide .guide-item:hover .guide-icon {
+    color: #9356dc;
+  }
+  main.container section.rest-container {
+    background-color: #f6f6f6;
+  }
+  main.container section.rest-container h1 {
+    text-align: left;
+    padding: 40px 20px 0px 20px;
+  }
+  main.container section.rest-container div.restaurants {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 5px auto;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px 20px 40px 20px;
+  }
+  main.container section.rest-container div.restaurants .rest_item {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 100%;
+    margin: 20px 0 20px 0;
+    font-weight: 100;
+    border-radius: 20px;
+    box-shadow: 0px 4px 8px 0 rgba(129, 126, 126, 0.2), 0 6px 20px 0 rgba(122, 120, 120, 0.19);
+  }
+  main.container section.rest-container div.restaurants .rest_item span.new {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    color: #078b6b;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 30px;
+    background-color: #99e2d0;
+    padding: 0 25px 0 25px;
+    border-radius: 2px;
+  }
+  main.container section.rest-container div.restaurants .rest_item a {
+    text-decoration: none;
+  }
+  main.container section.rest-container div.restaurants .rest_item a img {
+    object-fit: cover;
+    width: 100%;
+    height: 180px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  main.container section.rest-container div.restaurants .rest_item a .name {
+    color: #000000;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 10px 0 0 15px;
+  }
+  main.container section.rest-container div.restaurants .rest_item a .city {
+    color: #000000;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 5px 0 15px 15px;
+  }
+  main.container section.rest-container div.restaurants .rest_item .rating {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    font-size: 24px;
+    color: #919191;
+  }
 }
-main.container input[type=button] {
-  padding: 15px 25px 15px 25px;
-  border-radius: 30px;
-  background: linear-gradient(#ff79da, #9356dc);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  cursor: pointer;
-  border: none;
-  background-color: #9356dc;
-  color: #ffffff;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
+@media screen and (min-width: 479px) {
+  main.container {
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  main.container input[type=button] {
+    padding: 15px 25px 15px 25px;
+    border-radius: 30px;
+    background: linear-gradient(#ff79da, #9356dc);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    border: none;
+    background-color: #9356dc;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  main.container section.location {
+    padding: 15px;
+    background-color: #eaeaea;
+    width: 100%;
+    text-align: center;
+    color: #000000;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  main.container section.explore {
+    width: 100%;
+    background-color: #f6f6f6;
+    padding: 20px 20px 40px 20px;
+    text-align: center;
+  }
+  main.container section.explore h1 {
+    line-height: 70px;
+  }
+  main.container section.explore p {
+    color: #000000;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 10px 0 30px 0;
+  }
+  main.container section.guide {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px 40px 10px;
+    width: 100%;
+  }
+  main.container section.guide h1 {
+    text-align: left;
+  }
+  main.container section.guide .guide-item {
+    position: relative;
+    background-color: #f6f6f6;
+    color: #000000;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    box-shadow: 0px 4px 8px 0 rgba(129, 126, 126, 0.2), 0 6px 20px 0 rgba(122, 120, 120, 0.19);
+    border-radius: 20px;
+    width: 100%;
+    padding: 25px 20px 25px 30px;
+    margin: 10px 0 10px 0;
+  }
+  main.container section.guide .guide-item a {
+    text-decoration: none;
+    color: #000000;
+    padding-left: 20px;
+  }
+  main.container section.guide .guide-item span.fa-stack {
+    position: absolute;
+    left: -20px;
+  }
+  main.container section.guide .guide-item .fa-stack .fa-circle {
+    color: #9356dc;
+    font-size: 22px;
+    line-height: 20px;
+  }
+  main.container section.guide .guide-item .fa-stack .fa-stack-1x {
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 20px;
+    font-family: "Roboto";
+    font-weight: 500;
+  }
+  main.container section.guide .guide-item .guide-icon {
+    color: #919191;
+  }
+  main.container section.guide .guide-item:hover {
+    background-color: #f5edff;
+  }
+  main.container section.guide .guide-item:hover .guide-icon {
+    color: #9356dc;
+  }
+  main.container section.rest-container {
+    background-color: #f6f6f6;
+  }
+  main.container section.rest-container h1 {
+    text-align: left;
+    padding: 40px 0 20px 10px;
+  }
+  main.container section.rest-container div.restaurants {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  main.container section.rest-container div.restaurants .rest_item {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    flex: 2 2 45%;
+    font-weight: 100;
+    border-radius: 20px;
+    box-shadow: 0px 4px 8px 0 rgba(129, 126, 126, 0.2), 0 6px 20px 0 rgba(122, 120, 120, 0.19);
+  }
+  main.container section.rest-container div.restaurants .rest_item span.new {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    color: #078b6b;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 30px;
+    background-color: #99e2d0;
+    padding: 0 25px 0 25px;
+    border-radius: 2px;
+  }
+  main.container section.rest-container div.restaurants .rest_item a {
+    text-decoration: none;
+  }
+  main.container section.rest-container div.restaurants .rest_item a img {
+    object-fit: cover;
+    width: 100%;
+    height: 180px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  main.container section.rest-container div.restaurants .rest_item a .name {
+    color: #000000;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 10px 0 0 15px;
+  }
+  main.container section.rest-container div.restaurants .rest_item a .city {
+    color: #000000;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 5px 0 15px 15px;
+  }
+  main.container section.rest-container div.restaurants .rest_item .rating {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    font-size: 24px;
+    color: #919191;
+  }
 }
-main.container section.location {
-  padding: 15px;
-  background-color: #eaeaea;
-  width: 100%;
-  text-align: center;
-  color: #000000;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-  box-shadow: 8px 4px 0 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-main.container section.explore {
-  width: 100%;
-  background-color: #f6f6f6;
-  padding: 20px 20px 40px 20px;
-  text-align: center;
-}
-main.container section.explore h1 {
-  line-height: 70px;
-}
-main.container section.explore p {
-  color: #000000;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 20px;
-  margin: 10px 0 30px 0;
-}
-main.container section.guide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 20px 20px 40px 20px;
-  width: 100%;
-}
-main.container section.guide .guide-item {
-  box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(7, 5, 5, 0.19);
-  border-radius: 20px;
-  width: 100%;
-  padding: 20px 20px 40px 20px;
-  margin: 10px 0 10px 0;
-}
-main.container section.guide .guide-item .fa-stack .fa-circle {
-  color: #9356dc;
-}
-main.container section.guide .guide-item .fa-stack .fa-stack-1x {
-  color: #ffffff;
-}
-main.container section.restaurants {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 5px auto;
-  width: 100%;
-  margin: 0 auto;
-  padding: 20px 20px 40px 20px;
-}
-main.container section.restaurants .rest_item {
-  display: flex;
-  flex-direction: row;
-  flex: 1 1 100%;
-  margin: 20px 0 20px 0;
-  font-weight: 100;
-  width: 100%;
-  border-radius: 20px;
-  box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(7, 5, 5, 0.19);
-}
-main.container section.restaurants .rest_item a {
-  text-decoration: none;
-}
-main.container section.restaurants .rest_item a img {
-  object-fit: cover;
-  width: 100%;
-  height: 180px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-}
-main.container section.restaurants .rest_item a .name {
-  color: #000000;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-}
-main.container section.restaurants .rest_item a .city {
-  color: #000000;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 20px;
-}
-main.container section.restaurants .rest_item .rating {
-  position: relative;
-  right: 20px;
-  bottom: 20px;
-}
-
 header {
   background-color: #ffffff;
   text-align: center;
@@ -173,6 +399,9 @@ footer li {
 footer li a {
   color: white;
   text-decoration: none;
+}
+footer li a .fas {
+  padding-right: 5px;
 }
 
 /*!
