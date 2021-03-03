@@ -1,0 +1,15 @@
+footer {
+  background-color: $colour-footer;
+  padding: 20px 20px 40px 20px;
+  font-family: "Shrikhand";
+  @include textStyle($colour-white, 16px, 500, 40px);
+  li {
+    font-family: "Roboto";
+    line-height: 26px;
+    list-style: none;
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}

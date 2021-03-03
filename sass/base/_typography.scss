@@ -1,0 +1,21 @@
+body {
+  font-family: "Roboto";
+  color: $colour-black;
+  font-size: 14px;
+  font-weight: map-get($font-weights, regular);
+  line-height: 1.7;
+  background: $colour-white;
+}
+
+h2 {
+  font-family: "Roboto";
+  color: $colour-black;
+  font-size: 18px;
+  font-weight: map-get($font-weights, bold);
+  line-height: 1.7;
+  text-align: center;
+}
+p {
+  font-weight: map-get($font-weights, medium);
+  font-size: small;
+}

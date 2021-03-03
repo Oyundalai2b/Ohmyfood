@@ -1,0 +1,7 @@
+@function lightness-shift($colour-secondary) {
+  @if (lightness($colour-secondary) < 25%) {
+    @return lighten($colour-secondary, 10%);
+  } @else {
+    @return darken($colour-secondary, 10%);
+  }
+}

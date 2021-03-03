@@ -1,0 +1,42 @@
+@mixin textCenter {
+  text-align: center;
+}
+@mixin textStyle($text-color, $font-size, $font-weight, $line-height) {
+  color: $text-color;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+// @mixin textStyle {
+//   color: $colour-black;
+//   font-weight: map-get($font-weights, bold);
+//   font-size: 16px;
+//   line-height: 30px;
+// }
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+@mixin restItem($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+  margin: 5px auto;
+}
+@mixin btn {
+  padding: 15px 25px 15px 25px;
+  border-radius: 30px;
+  background: linear-gradient($colour-secondary, $colour-primary);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+  border: none;
+  background-color: $colour-primary;
+}
