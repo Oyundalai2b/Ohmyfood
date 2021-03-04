@@ -1,0 +1,92 @@
+@include mobile {
+  main.menu-container {
+    background: $colour-darkgrey;
+    position: relative;
+    margin-bottom: 0;
+
+    @include flexCenter(column);
+
+    justify-content: center;
+    section img {
+      object-fit: cover;
+      width: 100%;
+    }
+    section {
+      width: 100%;
+      border-radius: 30px;
+      background: $colour-darkgrey;
+
+      h1 {
+        text-align: left;
+        font-family: "shrikhand";
+        font-weight: 500;
+        font-size: 26px;
+      }
+      .rating {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        font-size: 24px;
+        color: $colour-icon-default;
+      }
+    }
+    section.menu {
+      padding: 15px 15px 50px 15px;
+      position: relative;
+      top: -30px;
+
+      @include textCenter;
+      input[type="button"] {
+        margin-top: 20px;
+        @include btn(15px 70px 15px 70px);
+        @include textStyle($colour-white, 16px, 400, 20px);
+      }
+      .sub-menu {
+        text-align: left;
+        margin-top: 20px;
+        a {
+          @include textStyle($colour-icon-default, 14px, 500, 24px);
+          text-decoration: none;
+          &:hover {
+            border-bottom: solid;
+            border-color: $colour-tertiary;
+          }
+        }
+
+        .item {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          border-radius: 10px;
+          background-color: white;
+          margin: 20px 0 20px 0;
+          label {
+            margin-left: 10px;
+            &.menu-title {
+              padding-top: 5px;
+              font-weight: 700;
+              font-size: 16px;
+            }
+            &.description {
+              padding-bottom: 5px;
+            }
+            &.price {
+              position: absolute;
+              right: 20px;
+              bottom: 5px;
+              font-size: 14px;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include desktop {
+  main.menu-container section img {
+    object-fit: cover;
+    width: 100%;
+  }
+}

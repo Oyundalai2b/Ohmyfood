@@ -3,7 +3,7 @@
     display: flex;
     @include flexCenter(column);
     input[type="button"] {
-      @include btn;
+      @include btn(15px 25px 15px 25px);
       // width: 100%;
       @include textStyle($colour-white, 16px, 400, 20px);
     }
@@ -168,7 +168,7 @@
     margin-left: auto;
     margin-right: auto;
     input[type="button"] {
-      @include btn;
+      @include btn(15px 25px 15px 25px);
 
       @include textStyle($colour-white, 16px, 400, 20px);
     }
@@ -257,7 +257,7 @@
         flex-wrap: wrap;
         width: 100%;
         // margin: 0 auto;
-        // padding: 0px 20px 40px 20px;
+        padding-bottom: 40px;
         justify-content: space-between;
         align-items: center;
 

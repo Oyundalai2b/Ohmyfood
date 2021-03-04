@@ -319,6 +319,7 @@ p {
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
+    padding-bottom: 40px;
     justify-content: space-between;
     align-items: center;
   }
@@ -383,6 +384,8 @@ header {
 }
 
 footer {
+  position: relative;
+  bottom: 0;
   background-color: #353535;
   padding: 20px 20px 40px 20px;
   font-family: "Shrikhand";
@@ -404,6 +407,107 @@ footer li a .fas {
   padding-right: 5px;
 }
 
+@media screen and (max-width: 479px) {
+  main.menu-container {
+    background: #eaeaea;
+    position: relative;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  main.menu-container section img {
+    object-fit: cover;
+    width: 100%;
+  }
+  main.menu-container section {
+    width: 100%;
+    border-radius: 30px;
+    background: #eaeaea;
+  }
+  main.menu-container section h1 {
+    text-align: left;
+    font-family: "shrikhand";
+    font-weight: 500;
+    font-size: 26px;
+  }
+  main.menu-container section .rating {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 24px;
+    color: #919191;
+  }
+  main.menu-container section.menu {
+    padding: 15px 15px 50px 15px;
+    position: relative;
+    top: -30px;
+    text-align: center;
+  }
+  main.menu-container section.menu input[type=button] {
+    margin-top: 20px;
+    padding: 15px 70px 15px 70px;
+    border-radius: 30px;
+    background: linear-gradient(#ff79da, #9356dc);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    border: none;
+    background-color: #9356dc;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  main.menu-container section.menu .sub-menu {
+    text-align: left;
+    margin-top: 20px;
+  }
+  main.menu-container section.menu .sub-menu a {
+    color: #919191;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    text-decoration: none;
+  }
+  main.menu-container section.menu .sub-menu a:hover {
+    border-bottom: solid;
+    border-color: #99e2d0;
+  }
+  main.menu-container section.menu .sub-menu .item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: white;
+    margin: 20px 0 20px 0;
+  }
+  main.menu-container section.menu .sub-menu .item label {
+    margin-left: 10px;
+  }
+  main.menu-container section.menu .sub-menu .item label.menu-title {
+    padding-top: 5px;
+    font-weight: 700;
+    font-size: 16px;
+  }
+  main.menu-container section.menu .sub-menu .item label.description {
+    padding-bottom: 5px;
+  }
+  main.menu-container section.menu .sub-menu .item label.price {
+    position: absolute;
+    right: 20px;
+    bottom: 5px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+@media screen and (min-width: 479px) {
+  main.menu-container section img {
+    object-fit: cover;
+    width: 100%;
+  }
+}
 /*!
  * Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
