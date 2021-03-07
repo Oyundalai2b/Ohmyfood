@@ -2,9 +2,10 @@
   main.container {
     display: flex;
     @include flexCenter(column);
+    justify-content: center;
+    align-items: center;
     input[type="button"] {
       @include btn(15px 25px 15px 25px);
-      // width: 100%;
       @include textStyle($colour-white, 16px, 400, 20px);
     }
 
@@ -164,6 +165,8 @@
   main.container {
     display: flex;
     @include flexCenter(column);
+    justify-content: center;
+    align-items: center;
     width: $tablet-width;
     margin-left: auto;
     margin-right: auto;
