@@ -1,4 +1,23 @@
 @include mobile {
+  div.bouncer {
+    @include bouncer;
+    & div {
+      @include bouncer-ball;
+    }
+    & div:nth-child(1) {
+      background: $colour-primary;
+      animation-delay: 0.1s;
+    }
+    & div:nth-child(2) {
+      background: $colour-secondary;
+      animation-delay: 0.2s;
+    }
+    & div:nth-child(3) {
+      background: $colour-tertiary;
+      animation-delay: 0.3s;
+    }
+  }
+
   main.container {
     display: flex;
     @include flexCenter(column);
@@ -138,23 +157,6 @@
             bottom: 20px;
             font-size: 24px;
             color: $colour-icon-default;
-            // &:hover .fas {
-            //   opacity: 1;
-            // }
-            // .far.fa-heart {
-            //   &:hover {
-            //     opacity: 0;
-            //     // background: linear-gradient($colour-secondary, $colour-primary);
-            //   }
-            // }
-            // .far.fa-heart:hover .fas.fa-heart {
-            //   opacity: 1;
-            //   // background: linear-gradient($colour-secondary, $colour-primary);
-            // }
-            // .fas.fa-heart {
-            //   opacity: 0;
-            //   color: $colour-primary;
-            // }
           }
         }
       }
@@ -162,6 +164,25 @@
   }
 }
 @include desktop {
+  div.bouncer {
+    @include bouncer;
+    & div {
+      @include bouncer-ball;
+    }
+    & div:nth-child(1) {
+      background: $colour-primary;
+      animation-delay: 0.1s;
+    }
+    & div:nth-child(2) {
+      background: $colour-secondary;
+      animation-delay: 0.2s;
+    }
+    & div:nth-child(3) {
+      background: $colour-tertiary;
+      animation-delay: 0.3s;
+    }
+  }
+
   main.container {
     display: flex;
     @include flexCenter(column);
@@ -311,23 +332,16 @@
             bottom: 20px;
             font-size: 24px;
             color: $colour-icon-default;
-            // &:hover .fas {
-            //   opacity: 1;
-            // }
-            // .far.fa-heart {
-            //   &:hover {
-            //     opacity: 0;
-            //     // background: linear-gradient($colour-secondary, $colour-primary);
-            //   }
-            // }
-            // .far.fa-heart:hover .fas.fa-heart {
-            //   opacity: 1;
-            //   // background: linear-gradient($colour-secondary, $colour-primary);
-            // }
-            // .fas.fa-heart {
-            //   opacity: 0;
-            //   color: $colour-primary;
-            // }
+            &:hover {
+              background: -webkit-linear-gradient(
+                $colour-primary,
+                $colour-secondary
+              );
+              background-clip: text;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              transition: 2s;
+            }
           }
         }
       }
