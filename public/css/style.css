@@ -18,17 +18,14 @@
     opacity: 0;
   }
 }
-div.wrapper {
-  opacity: 0;
-  animation: wrapper 0.5s forwards 3s;
-}
-
 @keyframes wrapper {
   from {
     opacity: 0;
+    overflow-y: hidden;
   }
   to {
     opacity: 1;
+    overflow-y: visible;
   }
 }
 *,
@@ -94,6 +91,11 @@ p {
   div.bouncer div:nth-child(3) {
     background: #99e2d0;
     animation-delay: 0.3s;
+  }
+
+  div.wrapper {
+    opacity: 0;
+    animation: wrapper 0.5s forwards 3s;
   }
 
   main.container {
@@ -297,6 +299,11 @@ p {
   div.bouncer div:nth-child(3) {
     background: #99e2d0;
     animation-delay: 0.3s;
+  }
+
+  div.wrapper {
+    opacity: 0;
+    animation: wrapper 0.5s forwards 3s;
   }
 
   main.container {

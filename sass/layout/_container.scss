@@ -17,6 +17,10 @@
       animation-delay: 0.3s;
     }
   }
+  div.wrapper {
+    opacity: 0;
+    animation: wrapper 0.5s forwards 3s;
+  }
 
   main.container {
     display: flex;
@@ -182,7 +186,10 @@
       animation-delay: 0.3s;
     }
   }
-
+  div.wrapper {
+    opacity: 0;
+    animation: wrapper 0.5s forwards 3s;
+  }
   main.container {
     display: flex;
     @include flexCenter(column);
