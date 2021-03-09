@@ -738,6 +738,17 @@ header {
   text-align: center;
   padding: 20px 10px 5px 10px;
 }
+header div.back {
+  position: absolute;
+  left: 20px;
+}
+header div.back a {
+  text-decoration: none;
+  color: #919191;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+}
 
 footer {
   width: 100%;
