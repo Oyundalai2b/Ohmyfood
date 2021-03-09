@@ -1,19 +1,58 @@
 footer {
+  width: 100%;
   position: relative;
   bottom: 0;
   background-color: $colour-footer;
   padding: 20px 20px 40px 20px;
   font-family: "Shrikhand";
   @include textStyle($colour-white, 16px, 500, 40px);
-  li {
-    font-family: "Roboto";
-    line-height: 26px;
-    list-style: none;
-    a {
-      color: white;
-      text-decoration: none;
-      .fas {
-        padding-right: 5px;
+  ul {
+    display: flex;
+    flex-direction: row;
+
+    li {
+      width: 350px;
+      text-align: left;
+      font-family: "Roboto";
+      line-height: 26px;
+      list-style: none;
+      a {
+        color: white;
+        text-decoration: none;
+        .fas {
+          padding-right: 5px;
+        }
+      }
+    }
+  }
+}
+@include mobile {
+  footer {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    background-color: $colour-footer;
+    padding: 20px 20px 40px 20px;
+    font-family: "Shrikhand";
+    @include textStyle($colour-white, 16px, 500, 40px);
+
+    ul {
+      display: flex;
+      flex-direction: column;
+
+      li {
+        width: 350px;
+        text-align: left;
+        font-family: "Roboto";
+        line-height: 26px;
+        list-style: none;
+        a {
+          color: white;
+          text-decoration: none;
+          .fas {
+            padding-right: 5px;
+          }
+        }
       }
     }
   }

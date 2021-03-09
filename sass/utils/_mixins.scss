@@ -1,11 +1,43 @@
 @mixin mobile {
-  @media screen and (max-width: #{$mobile-width}) {
+  @media screen and (min-width: #{$mobile-width}) and (max-width: #{$tablet-width }) {
     @content;
   }
 }
-@mixin desktop {
-  @media screen and (min-width: #{$mobile-width}) {
+
+@mixin tablet {
+  @media screen and (min-width: #{$tablet-width}) and (max-width: #{$desktop-width }) {
     @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin bouncerLoader {
+  div.bouncer {
+    @include bouncer;
+    & div {
+      @include bouncer-ball;
+    }
+    & div:nth-child(1) {
+      background: $colour-primary;
+      animation-delay: 0.1s;
+    }
+    & div:nth-child(2) {
+      background: $colour-secondary;
+      animation-delay: 0.2s;
+    }
+    & div:nth-child(3) {
+      background: $colour-tertiary;
+      animation-delay: 0.3s;
+    }
+  }
+  div.wrapper {
+    opacity: 0;
+    animation: wrapper 0.5s forwards 3s;
   }
 }
 

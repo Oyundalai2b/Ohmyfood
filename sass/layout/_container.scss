@@ -1,22 +1,5 @@
 @include mobile {
-  div.bouncer {
-    @include bouncer;
-    & div {
-      @include bouncer-ball;
-    }
-    & div:nth-child(1) {
-      background: $colour-primary;
-      animation-delay: 0.1s;
-    }
-    & div:nth-child(2) {
-      background: $colour-secondary;
-      animation-delay: 0.2s;
-    }
-    & div:nth-child(3) {
-      background: $colour-tertiary;
-      animation-delay: 0.3s;
-    }
-  }
+  @include bouncerLoader;
   div.wrapper {
     opacity: 0;
     animation: wrapper 0.5s forwards 3s;
@@ -167,25 +150,8 @@
     }
   }
 }
-@include desktop {
-  div.bouncer {
-    @include bouncer;
-    & div {
-      @include bouncer-ball;
-    }
-    & div:nth-child(1) {
-      background: $colour-primary;
-      animation-delay: 0.1s;
-    }
-    & div:nth-child(2) {
-      background: $colour-secondary;
-      animation-delay: 0.2s;
-    }
-    & div:nth-child(3) {
-      background: $colour-tertiary;
-      animation-delay: 0.3s;
-    }
-  }
+@include tablet {
+  @include bouncerLoader;
   div.wrapper {
     opacity: 0;
     animation: wrapper 0.5s forwards 3s;
@@ -195,7 +161,6 @@
     @include flexCenter(column);
     justify-content: center;
     align-items: center;
-    width: $tablet-width;
     margin-left: auto;
     margin-right: auto;
     input[type="button"] {
@@ -229,45 +194,232 @@
     section.guide {
       display: flex;
       flex-direction: column;
-      padding: 40px 20px 40px 10px;
+      padding: 40px 10px 40px 10px;
       width: 100%;
       h1 {
         text-align: left;
       }
+      .guide-item-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
 
-      .guide-item {
-        position: relative;
-        background-color: $colour-grey;
-        @include textStyle($colour-black, 16px, 700, 20px);
-        box-shadow: 0px 4px 8px 0 rgba(129, 126, 126, 0.2),
-          0 6px 20px 0 rgba(122, 120, 120, 0.19);
-        border-radius: 20px;
-        width: 100%;
-        padding: 25px 20px 25px 30px;
-        margin: 10px 0 10px 0;
-        a {
-          text-decoration: none;
-          color: $colour-black;
-          padding-left: 20px;
+        .guide-item {
+          position: relative;
+          background-color: $colour-grey;
+          @include textStyle($colour-black, 16px, 700, 20px);
+          box-shadow: 0px 4px 8px 0 rgba(129, 126, 126, 0.2),
+            0 6px 20px 0 rgba(122, 120, 120, 0.19);
+          border-radius: 20px;
+
+          flex: 1 1 30%;
+          padding: 25px 20px 25px 30px;
+          margin: 10px 20px 10px 0;
+          &:last-child {
+            margin-right: 0;
+          }
+          a {
+            text-decoration: none;
+            color: $colour-black;
+            padding-left: 20px;
+          }
+          span.fa-stack {
+            position: absolute;
+            left: -20px;
+          }
+          .fa-stack .fa-circle {
+            color: $colour-primary;
+            font-size: 22px;
+            line-height: 20px;
+          }
+          .fa-stack .fa-stack-1x {
+            color: $colour-white;
+            font-size: 12px;
+            line-height: 20px;
+            font-family: "Roboto";
+            font-weight: 500;
+          }
+          .guide-icon {
+            color: $colour-icon-default;
+          }
         }
-        span.fa-stack {
-          position: absolute;
-          left: -20px;
-        }
-        .fa-stack .fa-circle {
-          color: $colour-primary;
-          font-size: 22px;
-          line-height: 20px;
-        }
-        .fa-stack .fa-stack-1x {
-          color: $colour-white;
-          font-size: 12px;
-          line-height: 20px;
-          font-family: "Roboto";
-          font-weight: 500;
-        }
+      }
+      .guide-item:hover {
+        background-color: $colour-guide-hover;
         .guide-icon {
-          color: $colour-icon-default;
+          color: $colour-primary;
+        }
+      }
+    }
+    section.rest-container {
+      background-color: $colour-grey;
+      h1 {
+        text-align: left;
+        padding: 40px 0 20px 10px;
+      }
+      div.restaurants {
+        @include restItem(row);
+        flex-wrap: wrap;
+        width: 100%;
+        // margin: 0 auto;
+        padding-bottom: 40px;
+        justify-content: space-between;
+        align-items: center;
+
+        .rest_item {
+          position: relative;
+          display: flex;
+          flex-direction: row;
+          margin: 10px;
+
+          flex: 2 2 45%;
+
+          // margin: 20px 0 20px 0;
+          font-weight: map-get($font-weights, regular);
+
+          border-radius: 20px;
+          box-shadow: 0px 4px 8px 0 rgba(129, 126, 126, 0.2),
+            0 6px 20px 0 rgba(122, 120, 120, 0.19);
+          span.new {
+            position: absolute;
+            right: 10px;
+            top: 15px;
+            @include textStyle($colour-new-text, 14px, 700, 30px);
+            background-color: $colour-new-background;
+            padding: 0 25px 0 25px;
+            border-radius: 2px;
+          }
+          a {
+            text-decoration: none;
+            img {
+              object-fit: cover;
+              width: 100%;
+              height: 180px;
+              border-top-left-radius: 20px;
+              border-top-right-radius: 20px;
+            }
+            .name {
+              @include textStyle($colour-black, 16px, 700, 20px);
+              padding: 10px 0 0 15px;
+            }
+            .city {
+              @include textStyle($colour-black, 16px, 300, 20px);
+              padding: 5px 0 15px 15px;
+            }
+          }
+          .rating {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            font-size: 24px;
+            color: $colour-icon-default;
+            &:hover {
+              background: -webkit-linear-gradient(
+                $colour-primary,
+                $colour-secondary
+              );
+              background-clip: text;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              transition: 2s;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include desktop {
+  @include bouncerLoader;
+  main.container {
+    display: flex;
+    @include flexCenter(column);
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    input[type="button"] {
+      @include btn(15px 25px 15px 25px);
+
+      @include textStyle($colour-white, 16px, 400, 20px);
+    }
+
+    section.location {
+      padding: 15px;
+      background-color: $colour-darkgrey;
+      width: 100%;
+      @include textCenter;
+      @include textStyle($colour-black, 16px, 700, 20px);
+      // box-shadow: 8px 4px 0 0 rgba(0, 0, 0, 0.2),
+      //   0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    section.explore {
+      width: 100%;
+      background-color: $colour-grey;
+      padding: 20px 20px 40px 20px;
+      @include textCenter;
+      h1 {
+        line-height: 70px;
+      }
+      p {
+        @include textStyle($colour-black, 16px, 300, 20px);
+        margin: 10px 0 30px 0;
+      }
+    }
+    section.guide {
+      display: flex;
+      flex-direction: column;
+      padding: 40px 10px 40px 10px;
+      width: 100%;
+      h1 {
+        text-align: left;
+      }
+      .guide-item-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .guide-item {
+          position: relative;
+          background-color: $colour-grey;
+          @include textStyle($colour-black, 16px, 700, 20px);
+          box-shadow: 0px 4px 8px 0 rgba(129, 126, 126, 0.2),
+            0 6px 20px 0 rgba(122, 120, 120, 0.19);
+          border-radius: 20px;
+
+          flex: 1 1 30%;
+          padding: 25px 20px 25px 30px;
+          margin: 10px 20px 10px 0;
+          &:last-child {
+            margin-right: 0;
+          }
+          a {
+            text-decoration: none;
+            color: $colour-black;
+            padding-left: 20px;
+          }
+          span.fa-stack {
+            position: absolute;
+            left: -20px;
+          }
+          .fa-stack .fa-circle {
+            color: $colour-primary;
+            font-size: 22px;
+            line-height: 20px;
+          }
+          .fa-stack .fa-stack-1x {
+            color: $colour-white;
+            font-size: 12px;
+            line-height: 20px;
+            font-family: "Roboto";
+            font-weight: 500;
+          }
+          .guide-icon {
+            color: $colour-icon-default;
+          }
         }
       }
       .guide-item:hover {
