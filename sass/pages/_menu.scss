@@ -220,11 +220,10 @@
       @include textCenter;
       @include flexCenter(row);
       flex-wrap: wrap;
-
       justify-content: space-evenly;
-      .sub-menu {
-        text-align: left;
 
+      section.sub-menu {
+        text-align: left;
         width: 30%;
 
         h3 {
@@ -236,25 +235,61 @@
           width: 36px;
         }
 
-        .item {
+        li.item {
+          animation: fadeIn 0.4s ease-in both;
+          &:nth-child(1) {
+            animation-delay: 0;
+          }
+          &:nth-child(2) {
+            animation-delay: 0.1s;
+          }
+          &:nth-child(3) {
+            animation-delay: 0.2s;
+          }
+
+          &:hover div.check {
+            visibility: visible;
+            right: 0;
+            i {
+              // animation: check 3s;
+            }
+            // animation: check 1s;
+          }
+
           position: relative;
           display: flex;
           flex-direction: column;
           border-radius: 10px;
           background-color: white;
           margin: 20px 0 20px 0;
+          overflow: hidden;
+          div.check {
+            position: absolute;
+            width: 20%;
+            right: -20%;
+            background-color: $colour-tertiary;
+            // width: 100px;
+            height: 100%;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            // overflow: hidden;
+            // visibility: hidden;
+          }
+
           label {
             margin-left: 10px;
+
             &.menu-title {
               padding-top: 5px;
               font-weight: 700;
               font-size: 16px;
             }
             &.description {
+              width: 90%;
               padding-bottom: 5px;
             }
             &.price {
-              position: absolute;
+              width: 10%;
+              position: relative;
               right: 20px;
               bottom: 5px;
               font-size: 14px;

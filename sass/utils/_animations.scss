@@ -28,3 +28,36 @@
     overflow-y: visible;
   }
 }
+
+// @keyframes fadeIn {
+//   from {
+//     opacity: 0;
+//     transform: translateY(50%);
+//   }
+//   to {
+//     opacity: 1;
+//     transform: translateY(0);
+//   }
+// }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 30%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes check {
+  // from {
+  //   opacity: 0;
+  //   transform: translateX(20%);
+  // }
+  // to {
+  //   opacity: 1;
+  //   transform: translateX(0);
+  // }
+  transform: rotate(90deg, 0deg);
+  transition: all 6s cubic-bezier(0.4, 0, 0.2, 1);
+}

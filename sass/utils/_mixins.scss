@@ -16,6 +16,23 @@
   }
 }
 
+@mixin bouncer {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+}
+@mixin bouncer-ball {
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+  border-radius: 50%;
+  animation: bouncer 0.5s cubic-bezier(0.19, 0.57, 0.3, 0.98) 6 alternate,
+    hideLoader 3s ease-in 3s 1 forwards;
+}
 @mixin bouncerLoader {
   div.bouncer {
     @include bouncer;
@@ -50,12 +67,6 @@
   font-size: $font-size;
   line-height: $line-height;
 }
-// @mixin textStyle {
-//   color: $colour-black;
-//   font-weight: map-get($font-weights, bold);
-//   font-size: 16px;
-//   line-height: 30px;
-// }
 
 @mixin flexCenter($direction) {
   display: flex;
@@ -80,21 +91,4 @@
     box-shadow: 0 4px 10px 4px rgba(0, 0, 0, 0.2),
       0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
-}
-@mixin bouncer {
-  position: absolute;
-  top: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100px;
-}
-@mixin bouncer-ball {
-  width: 20px;
-  height: 20px;
-  margin: 10px;
-  border-radius: 50%;
-  animation: bouncer 0.5s cubic-bezier(0.19, 0.57, 0.3, 0.98) 6 alternate,
-    hideLoader 3s ease-in 3s 1 forwards;
 }
