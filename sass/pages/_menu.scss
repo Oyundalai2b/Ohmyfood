@@ -46,49 +46,84 @@
           justify-content: left;
           width: 36px;
         }
-
-        li.item {
-          animation: fadeIn 0.4s ease-in both;
-          &:nth-child(1) {
-            animation-delay: 0;
-          }
-          &:nth-child(2) {
-            animation-delay: 0.1s;
-          }
-          &:nth-child(3) {
-            animation-delay: 0.2s;
-          }
-
-          &:hover div.check {
-            visibility: visible;
-            right: 0;
-            i {
-              // animation: check 3s;
+        ul {
+          cursor: pointer;
+          li.item {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            border-radius: 10px;
+            background-color: white;
+            margin: 20px 0 20px 0;
+            overflow: hidden;
+            align-items: center;
+            // animation: fadeIn 0.4s ease-in both;
+            &:nth-child(1) {
+              animation-delay: 0;
             }
-            // animation: check 1s;
-          }
-          position: relative;
-          display: flex;
-          flex-direction: column;
-          border-radius: 10px;
-          background-color: white;
-          margin: 20px 0 20px 0;
-          label {
-            margin-left: 10px;
-            &.menu-title {
-              padding-top: 5px;
-              font-weight: 700;
-              font-size: 16px;
+            &:nth-child(2) {
+              animation-delay: 0.1s;
             }
-            &.description {
+            &:nth-child(3) {
+              animation-delay: 0.2s;
+            }
+
+            div.title-description {
+              padding-right: 10px;
+              width: 88%;
+              transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+
+              p.menu-title {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                margin-left: 10px;
+                padding-top: 5px;
+                font-weight: 700;
+                font-size: 16px;
+              }
+              p.description {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                cursor: pointer;
+                margin-left: 10px;
+                padding-bottom: 5px;
+                font-weight: 300;
+              }
+            }
+            &:hover div.title-description {
+              width: 68%;
+            }
+
+            div.price {
+              width: 5%;
+              font-weight: 500;
+              align-self: flex-end;
               padding-bottom: 5px;
             }
-            &.price {
+
+            div.check {
+              display: flex;
+              align-items: center;
+              justify-content: center;
               position: absolute;
-              right: 20px;
-              bottom: 5px;
-              font-size: 14px;
-              font-weight: 500;
+              width: 20%;
+              right: -20%;
+              background-color: $colour-tertiary;
+              height: 100%;
+              transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+              visibility: visible;
+              color: $colour-white;
+              font-size: 20px;
+            }
+            &:hover div.check {
+              visibility: visible;
+              right: 0;
+
+              i.fa-check-circle {
+                animation: check 1s;
+              }
             }
           }
         }
