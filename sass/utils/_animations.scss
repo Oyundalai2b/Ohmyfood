@@ -50,14 +50,11 @@
   }
 }
 @keyframes check {
-  // from {
-  //   opacity: 0;
-  //   transform: translateX(20%);
-  // }
-  // to {
-  //   opacity: 1;
-  //   transform: translateX(0);
-  // }
-  transform: rotate(90deg, 0deg);
-  transition: all 6s cubic-bezier(0.4, 0, 0.2, 1);
+  from {
+    transform: rotateZ(-90deg);
+  }
+  to {
+    transform: rotateZ(0deg);
+  }
+  // transition: all 6s cubic-bezier(0.4, 0, 0.2, 1);
 }
