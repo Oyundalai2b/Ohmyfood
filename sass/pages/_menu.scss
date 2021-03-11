@@ -27,7 +27,7 @@
         right: 20px;
         top: 20px;
         font-size: 24px;
-        color: $colour-icon-default;
+        @include rating;
       }
     }
     section.menu {
@@ -170,7 +170,7 @@
         right: 50px;
         top: 20px;
         font-size: 24px;
-        color: $colour-icon-default;
+        @include rating;
       }
     }
     section.menu {
@@ -316,7 +316,7 @@
         right: 50px;
         top: 20px;
         font-size: 24px;
-        color: $colour-icon-default;
+        @include rating;
       }
     }
     section.menu {

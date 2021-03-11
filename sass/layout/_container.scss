@@ -129,6 +129,8 @@
               border-top-left-radius: 20px;
               border-top-right-radius: 20px;
             }
+
+            @include flexCenter(column);
             .name {
               @include textStyle($colour-black, 16px, 700, 20px);
               padding: 10px 0 0 15px;
@@ -137,13 +139,14 @@
               @include textStyle($colour-black, 16px, 300, 20px);
               padding: 5px 0 15px 15px;
             }
-          }
-          .rating {
-            position: absolute;
-            right: 20px;
-            bottom: 20px;
-            font-size: 24px;
-            color: $colour-icon-default;
+
+            .rating {
+              position: absolute;
+              right: 20px;
+              bottom: 20px;
+              font-size: 24px;
+              @include rating;
+            }
           }
         }
       }
@@ -313,17 +316,8 @@
             right: 20px;
             bottom: 20px;
             font-size: 24px;
-            color: $colour-icon-default;
-            &:hover {
-              background: -webkit-linear-gradient(
-                $colour-primary,
-                $colour-secondary
-              );
-              background-clip: text;
-              -webkit-background-clip: text;
-              -webkit-text-fill-color: transparent;
-              transition: 2s;
-            }
+
+            @include rating;
           }
         }
       }
@@ -490,17 +484,7 @@
             right: 20px;
             bottom: 20px;
             font-size: 24px;
-            color: $colour-icon-default;
-            &:hover {
-              background: -webkit-linear-gradient(
-                $colour-primary,
-                $colour-secondary
-              );
-              background-clip: text;
-              -webkit-background-clip: text;
-              -webkit-text-fill-color: transparent;
-              transition: 2s;
-            }
+            @include rating;
           }
         }
       }

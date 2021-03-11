@@ -56,5 +56,16 @@
   to {
     transform: rotateZ(0deg);
   }
-  // transition: all 6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes fillHeart {
+  0% {
+    transform: translateX(30px);
+    color: linear-gradient($colour-guide-hover, $colour-secondary);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(30px);
+    opacity: 1;
+  }
 }
