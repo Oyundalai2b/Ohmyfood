@@ -124,7 +124,7 @@
       top: -30px;
       padding-top: 20px;
       h1 {
-        padding-left: 15px;
+        padding-left: 50px;
         text-align: left;
         font-family: "shrikhand";
         font-weight: 500;
@@ -132,7 +132,7 @@
       }
       .rating {
         position: absolute;
-        right: 20px;
+        right: 50px;
         top: 20px;
         font-size: 24px;
         color: $colour-icon-default;
@@ -161,6 +161,14 @@
           width: 36px;
         }
         li.item {
+          position: relative;
+          display: flex;
+          flex-direction: row;
+          border-radius: 10px;
+          background-color: white;
+          margin: 20px 0 20px 0;
+          overflow: hidden;
+          align-items: center;
           animation: fadeIn 0.4s ease-in both;
           &:nth-child(1) {
             animation-delay: 0;
@@ -172,37 +180,62 @@
             animation-delay: 0.2s;
           }
 
-          &:hover div.check {
-            visibility: visible;
-            right: 0;
-            i {
-              // animation: check 3s;
-            }
-            // animation: check 1s;
-          }
+          div.title-description {
+            padding-right: 10px;
+            width: 88%;
+            transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
 
-          position: relative;
-          display: flex;
-          flex-direction: column;
-          border-radius: 10px;
-          background-color: white;
-          margin: 20px 0 20px 0;
-          label {
-            margin-left: 10px;
-            &.menu-title {
+            p.menu-title {
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              margin-left: 10px;
               padding-top: 5px;
               font-weight: 700;
               font-size: 16px;
             }
-            &.description {
+            p.description {
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              cursor: pointer;
+              margin-left: 10px;
               padding-bottom: 5px;
+              font-weight: 300;
             }
-            &.price {
-              position: absolute;
-              right: 20px;
-              bottom: 5px;
-              font-size: 14px;
-              font-weight: 500;
+          }
+
+          &:hover div.title-description {
+            width: 68%;
+          }
+
+          div.price {
+            width: 5%;
+            font-weight: 500;
+            align-self: flex-end;
+            padding-bottom: 5px;
+          }
+
+          div.check {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            width: 20%;
+            right: -20%;
+            background-color: $colour-tertiary;
+            height: 100%;
+            transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+            visibility: visible;
+            color: $colour-white;
+            font-size: 20px;
+          }
+          &:hover div.check {
+            visibility: visible;
+            right: 0;
+
+            i.fa-check-circle {
+              animation: check 1s;
             }
           }
         }
@@ -237,7 +270,7 @@
       top: -30px;
       padding-top: 20px;
       h1 {
-        padding-left: 15px;
+        padding-left: 50px;
         text-align: left;
         font-family: "shrikhand";
         font-weight: 500;
@@ -245,7 +278,7 @@
       }
       .rating {
         position: absolute;
-        right: 20px;
+        right: 50px;
         top: 20px;
         font-size: 24px;
         color: $colour-icon-default;
@@ -299,7 +332,30 @@
               padding-right: 10px;
               width: 88%;
               transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+
+              p.menu-title {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                margin-left: 10px;
+                padding-top: 5px;
+                font-weight: 700;
+                font-size: 16px;
+              }
+              p.description {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                cursor: pointer;
+                margin-left: 10px;
+                padding-bottom: 5px;
+                font-weight: 300;
+              }
             }
+            &:hover div.title-description {
+              width: 68%;
+            }
+
             div.price {
               width: 5%;
               font-weight: 500;
@@ -317,13 +373,7 @@
               height: 100%;
               transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
               visibility: visible;
-            }
-            &:hover div.title-description {
-              width: 68%;
-            }
-            div.check {
               color: $colour-white;
-              text-align: center;
               font-size: 20px;
             }
             &:hover div.check {
@@ -333,38 +383,6 @@
               i.fa-check-circle {
                 animation: check 1s;
               }
-            }
-            &:hover label.menu-title {
-              overflow: hidden;
-              white-space: nowrap;
-              text-overflow: ellipsis;
-              // width: 70%;
-            }
-            &:hover label.description {
-              overflow: hidden;
-              white-space: nowrap;
-              text-overflow: ellipsis;
-              // width: 70%;
-              // padding-right: 30px;
-            }
-
-            p.menu-title {
-              overflow: hidden;
-              white-space: nowrap;
-              text-overflow: ellipsis;
-              margin-left: 10px;
-              padding-top: 5px;
-              font-weight: 700;
-              font-size: 16px;
-            }
-            p.description {
-              overflow: hidden;
-              white-space: nowrap;
-              text-overflow: ellipsis;
-              cursor: pointer;
-              margin-left: 10px;
-              padding-bottom: 5px;
-              font-weight: 300;
             }
           }
         }
