@@ -90,6 +90,7 @@
     }
     section.rest-container {
       background-color: $colour-grey;
+      width: 100%;
       h1 {
         text-align: left;
         padding: 40px 20px 0px 20px;
@@ -122,6 +123,8 @@
           }
           a {
             text-decoration: none;
+            width: 100%;
+
             img {
               object-fit: cover;
               width: 100%;
@@ -139,14 +142,13 @@
               @include textStyle($colour-black, 16px, 300, 20px);
               padding: 5px 0 15px 15px;
             }
-
-            .rating {
-              position: absolute;
-              right: 20px;
-              bottom: 20px;
-              font-size: 24px;
-              @include rating;
-            }
+          }
+          .rating {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            font-size: 24px;
+            @include rating;
           }
         }
       }
@@ -257,6 +259,7 @@
     }
     section.rest-container {
       background-color: $colour-grey;
+      width: 100%;
       h1 {
         text-align: left;
         padding: 40px 0 20px 10px;
@@ -295,6 +298,7 @@
           }
           a {
             text-decoration: none;
+            width: 100%;
             img {
               object-fit: cover;
               width: 100%;
@@ -425,6 +429,7 @@
     }
     section.rest-container {
       background-color: $colour-grey;
+      width: 100%;
       h1 {
         text-align: left;
         padding: 40px 0 20px 10px;
@@ -463,6 +468,7 @@
           }
           a {
             text-decoration: none;
+            width: 100%;
             img {
               object-fit: cover;
               width: 100%;
