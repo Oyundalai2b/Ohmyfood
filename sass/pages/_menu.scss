@@ -9,12 +9,7 @@
       width: 100%;
     }
     section.rest-title {
-      width: 100%;
-      border-radius: 30px;
-      background: $colour-darkgrey;
-      position: relative;
-      top: -30px;
-      padding-top: 20px;
+      @include restTitle;
       h1 {
         padding-left: 15px;
         text-align: left;
@@ -49,7 +44,7 @@
         ul {
           cursor: pointer;
           li.item {
-            @include item;
+            @include liItem;
             &:nth-child(1) {
               animation-delay: 0;
             }
@@ -66,22 +61,10 @@
               transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
 
               p.menu-title {
-                overflow: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-                margin-left: 10px;
-                padding-top: 5px;
-                font-weight: 700;
-                font-size: 16px;
+                @include pMenuTitle;
               }
               p.description {
-                overflow: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-                cursor: pointer;
-                margin-left: 10px;
-                padding-bottom: 5px;
-                font-weight: 300;
+                @include pDescrition;
               }
             }
             &:hover div.title-description {
@@ -96,18 +79,7 @@
             }
 
             div.check {
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              position: absolute;
-              width: 20%;
-              right: -20%;
-              background-color: $colour-tertiary;
-              height: 100%;
-              transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
-              visibility: visible;
-              color: $colour-white;
-              font-size: 20px;
+              @include divCheck;
             }
             &:hover div.check {
               visibility: visible;
@@ -144,12 +116,7 @@
       height: 300px;
     }
     section.rest-title {
-      width: 100%;
-      border-radius: 30px;
-      background: $colour-darkgrey;
-      position: relative;
-      top: -30px;
-      padding-top: 20px;
+      @include restTitle;
       h1 {
         padding-left: 50px;
         text-align: left;
@@ -189,7 +156,7 @@
         ul {
           cursor: pointer;
           li.item {
-            @include item;
+            @include liItem;
             &:nth-child(1) {
               animation-delay: 0;
             }
@@ -206,22 +173,10 @@
               transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
 
               p.menu-title {
-                overflow: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-                margin-left: 10px;
-                padding-top: 5px;
-                font-weight: 700;
-                font-size: 16px;
+                @include pMenuTitle;
               }
               p.description {
-                overflow: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-                cursor: pointer;
-                margin-left: 10px;
-                padding-bottom: 5px;
-                font-weight: 300;
+                @include pDescrition;
               }
             }
 
@@ -237,18 +192,7 @@
             }
 
             div.check {
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              position: absolute;
-              width: 20%;
-              right: -20%;
-              background-color: $colour-tertiary;
-              height: 100%;
-              transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
-              visibility: visible;
-              color: $colour-white;
-              font-size: 20px;
+              @include divCheck;
             }
             &:hover div.check {
               visibility: visible;
@@ -284,12 +228,7 @@
       height: 300px;
     }
     section.rest-title {
-      width: 100%;
-      border-radius: 30px;
-      background: $colour-darkgrey;
-      position: relative;
-      top: -30px;
-      padding-top: 20px;
+      @include restTitle;
       h1 {
         padding-left: 50px;
         text-align: left;
@@ -329,7 +268,7 @@
         ul {
           cursor: pointer;
           li.item {
-            @include item;
+            @include liItem;
             &:nth-child(1) {
               animation-delay: 0;
             }
@@ -346,22 +285,10 @@
               transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
 
               p.menu-title {
-                overflow: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-                margin-left: 10px;
-                padding-top: 5px;
-                font-weight: 700;
-                font-size: 16px;
+                @include pMenuTitle;
               }
               p.description {
-                overflow: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-                cursor: pointer;
-                margin-left: 10px;
-                padding-bottom: 5px;
-                font-weight: 300;
+                @include pDescrition;
               }
             }
             &:hover div.title-description {
@@ -375,18 +302,7 @@
               padding-bottom: 5px;
             }
             div.check {
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              position: absolute;
-              width: 20%;
-              right: -20%;
-              background-color: $colour-tertiary;
-              height: 100%;
-              transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
-              visibility: visible;
-              color: $colour-white;
-              font-size: 20px;
+              @include divCheck;
             }
             &:hover div.check {
               visibility: visible;

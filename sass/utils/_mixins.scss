@@ -86,7 +86,10 @@
   border: none;
   // background-color: $colour-primary;
   &:hover {
-    background: lighten($colour-secondary, 5%);
+    background: linear-gradient(
+      lighten($colour-secondary, 5%),
+      lighten($colour-primary, 5%)
+    );
     box-shadow: 0 4px 10px 4px rgba(0, 0, 0, 0.2),
       0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
@@ -112,7 +115,7 @@
   }
 }
 
-@mixin item {
+@mixin liItem {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -122,4 +125,47 @@
   overflow: hidden;
   align-items: center;
   animation: fadeIn 0.4s ease-in both;
+}
+
+@mixin divCheck {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 20%;
+  right: -20%;
+  background-color: $colour-tertiary;
+  height: 100%;
+  transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+  visibility: visible;
+  color: $colour-white;
+  font-size: 20px;
+}
+@mixin pDescrition {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  margin-left: 10px;
+  padding-bottom: 5px;
+  font-weight: 300;
+}
+
+@mixin pMenuTitle {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-left: 10px;
+  padding-top: 5px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+@mixin restTitle {
+  width: 100%;
+  border-radius: 30px;
+  background: $colour-darkgrey;
+  position: relative;
+  top: -30px;
+  padding-top: 20px;
 }
