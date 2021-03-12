@@ -45,9 +45,7 @@
           cursor: pointer;
           li.item {
             @include liItem;
-            &:nth-child(1) {
-              animation-delay: 0;
-            }
+
             &:nth-child(2) {
               animation-delay: 0.1s;
             }
@@ -157,9 +155,7 @@
           cursor: pointer;
           li.item {
             @include liItem;
-            &:nth-child(1) {
-              animation-delay: 0;
-            }
+
             &:nth-child(2) {
               animation-delay: 0.1s;
             }
@@ -269,9 +265,7 @@
           cursor: pointer;
           li.item {
             @include liItem;
-            &:nth-child(1) {
-              animation-delay: 0;
-            }
+
             &:nth-child(2) {
               animation-delay: 0.1s;
             }
