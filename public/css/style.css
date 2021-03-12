@@ -40,7 +40,7 @@
 }
 @keyframes check {
   from {
-    transform: rotateZ(-90deg);
+    transform: rotateZ(-180deg);
   }
   to {
     transform: rotateZ(0deg);
