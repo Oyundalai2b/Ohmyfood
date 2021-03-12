@@ -84,27 +84,28 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   cursor: pointer;
   border: none;
-  background-color: $colour-primary;
+  // background-color: $colour-primary;
   &:hover {
-    background: lighten($colour-primary, 10%);
+    background: lighten($colour-secondary, 5%);
     box-shadow: 0 4px 10px 4px rgba(0, 0, 0, 0.2),
       0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 }
 
 @mixin rating {
-  &:hover i.fas.fa-heart {
-    animation: fillHeart 1s cubic-bezier(0.46, 0.03, 0.52, 0.96) forwards;
+  font-size: 24px;
+  &:hover i.fas.fa-heart.back {
+    animation: fillHeart 2s cubic-bezier(0.46, 0.03, 0.52, 0.96) forwards;
     visibility: visible;
   }
-  &:hover i.far.fa-heart {
+  &:hover i.far.fa-heart.front {
     visibility: hidden;
   }
-  i.far.front {
+  i.far.fa-heart.front {
     visibility: visible;
     color: $colour-icon-default;
   }
-  i.fas.back {
+  i.fas.fa-heart.back {
     visibility: hidden;
   }
 }

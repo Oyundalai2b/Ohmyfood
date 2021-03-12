@@ -48,12 +48,18 @@
 }
 @keyframes fillHeart {
   0% {
-    transform: translateX(30px);
-    color: linear-gradient(#f5edff, #ff79da);
-    opacity: 0;
+    transform: translate(30px, 0px);
+    color: #ffffff;
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(30px, 0px);
+    color: #ff79da;
+    opacity: 1;
   }
   100% {
-    transform: translateX(30px);
+    transform: translate(30px, 0);
+    color: #ff79da;
     opacity: 1;
   }
 }
@@ -146,14 +152,13 @@ p {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     cursor: pointer;
     border: none;
-    background-color: #9356dc;
     color: #ffffff;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
   }
   main.container input[type=button]:hover {
-    background: #ae80e5;
+    background: #ff93e1;
     box-shadow: 0 4px 10px 4px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
   main.container section.location {
@@ -304,19 +309,20 @@ p {
     right: 20px;
     bottom: 20px;
     font-size: 24px;
+    font-size: 24px;
   }
-  main.container section.rest-container div.restaurants .rest_item a .rating:hover i.fas.fa-heart {
-    animation: fillHeart 1s cubic-bezier(0.46, 0.03, 0.52, 0.96) forwards;
+  main.container section.rest-container div.restaurants .rest_item a .rating:hover i.fas.fa-heart.back {
+    animation: fillHeart 2s cubic-bezier(0.46, 0.03, 0.52, 0.96) forwards;
     visibility: visible;
   }
-  main.container section.rest-container div.restaurants .rest_item a .rating:hover i.far.fa-heart {
+  main.container section.rest-container div.restaurants .rest_item a .rating:hover i.far.fa-heart.front {
     visibility: hidden;
   }
-  main.container section.rest-container div.restaurants .rest_item a .rating i.far.front {
+  main.container section.rest-container div.restaurants .rest_item a .rating i.far.fa-heart.front {
     visibility: visible;
     color: #919191;
   }
-  main.container section.rest-container div.restaurants .rest_item a .rating i.fas.back {
+  main.container section.rest-container div.restaurants .rest_item a .rating i.fas.fa-heart.back {
     visibility: hidden;
   }
 }
@@ -376,14 +382,13 @@ p {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     cursor: pointer;
     border: none;
-    background-color: #9356dc;
     color: #ffffff;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
   }
   main.container input[type=button]:hover {
-    background: #ae80e5;
+    background: #ff93e1;
     box-shadow: 0 4px 10px 4px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
   main.container section.location {
@@ -541,19 +546,20 @@ p {
     right: 20px;
     bottom: 20px;
     font-size: 24px;
+    font-size: 24px;
   }
-  main.container section.rest-container div.restaurants .rest_item .rating:hover i.fas.fa-heart {
-    animation: fillHeart 1s cubic-bezier(0.46, 0.03, 0.52, 0.96) forwards;
+  main.container section.rest-container div.restaurants .rest_item .rating:hover i.fas.fa-heart.back {
+    animation: fillHeart 2s cubic-bezier(0.46, 0.03, 0.52, 0.96) forwards;
     visibility: visible;
   }
-  main.container section.rest-container div.restaurants .rest_item .rating:hover i.far.fa-heart {
+  main.container section.rest-container div.restaurants .rest_item .rating:hover i.far.fa-heart.front {
     visibility: hidden;
   }
-  main.container section.rest-container div.restaurants .rest_item .rating i.far.front {
+  main.container section.rest-container div.restaurants .rest_item .rating i.far.fa-heart.front {
     visibility: visible;
     color: #919191;
   }
-  main.container section.rest-container div.restaurants .rest_item .rating i.fas.back {
+  main.container section.rest-container div.restaurants .rest_item .rating i.fas.fa-heart.back {
     visibility: hidden;
   }
 }
@@ -608,14 +614,13 @@ p {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     cursor: pointer;
     border: none;
-    background-color: #9356dc;
     color: #ffffff;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
   }
   main.container input[type=button]:hover {
-    background: #ae80e5;
+    background: #ff93e1;
     box-shadow: 0 4px 10px 4px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
   main.container section.location {
@@ -773,19 +778,20 @@ p {
     right: 20px;
     bottom: 20px;
     font-size: 24px;
+    font-size: 24px;
   }
-  main.container section.rest-container div.restaurants .rest_item .rating:hover i.fas.fa-heart {
-    animation: fillHeart 1s cubic-bezier(0.46, 0.03, 0.52, 0.96) forwards;
+  main.container section.rest-container div.restaurants .rest_item .rating:hover i.fas.fa-heart.back {
+    animation: fillHeart 2s cubic-bezier(0.46, 0.03, 0.52, 0.96) forwards;
     visibility: visible;
   }
-  main.container section.rest-container div.restaurants .rest_item .rating:hover i.far.fa-heart {
+  main.container section.rest-container div.restaurants .rest_item .rating:hover i.far.fa-heart.front {
     visibility: hidden;
   }
-  main.container section.rest-container div.restaurants .rest_item .rating i.far.front {
+  main.container section.rest-container div.restaurants .rest_item .rating i.far.fa-heart.front {
     visibility: visible;
     color: #919191;
   }
-  main.container section.rest-container div.restaurants .rest_item .rating i.fas.back {
+  main.container section.rest-container div.restaurants .rest_item .rating i.fas.fa-heart.back {
     visibility: hidden;
   }
 }
@@ -884,7 +890,6 @@ footer ul li a .fas {
   main.menu-container section.rest-title {
     width: 100%;
     border-radius: 30px;
-    background: #eaeaea;
     position: relative;
     top: -30px;
     padding-top: 20px;
@@ -899,21 +904,22 @@ footer ul li a .fas {
   main.menu-container section.rest-title .rating {
     position: absolute;
     right: 20px;
-    top: 20px;
+    bottom: 0px;
+    font-size: 24px;
     font-size: 24px;
   }
-  main.menu-container section.rest-title .rating:hover i.fas.fa-heart {
-    animation: fillHeart 1s cubic-bezier(0.46, 0.03, 0.52, 0.96) forwards;
+  main.menu-container section.rest-title .rating:hover i.fas.fa-heart.back {
+    animation: fillHeart 2s cubic-bezier(0.46, 0.03, 0.52, 0.96) forwards;
     visibility: visible;
   }
-  main.menu-container section.rest-title .rating:hover i.far.fa-heart {
+  main.menu-container section.rest-title .rating:hover i.far.fa-heart.front {
     visibility: hidden;
   }
-  main.menu-container section.rest-title .rating i.far.front {
+  main.menu-container section.rest-title .rating i.far.fa-heart.front {
     visibility: visible;
     color: #919191;
   }
-  main.menu-container section.rest-title .rating i.fas.back {
+  main.menu-container section.rest-title .rating i.fas.fa-heart.back {
     visibility: hidden;
   }
   main.menu-container section.menu {
@@ -1022,14 +1028,13 @@ footer ul li a .fas {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     cursor: pointer;
     border: none;
-    background-color: #9356dc;
     color: #ffffff;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
   }
   main.menu-container section.button input[type=button]:hover {
-    background: #ae80e5;
+    background: #ff93e1;
     box-shadow: 0 4px 10px 4px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 }
@@ -1066,19 +1071,20 @@ footer ul li a .fas {
     right: 50px;
     top: 20px;
     font-size: 24px;
+    font-size: 24px;
   }
-  main.menu-container section.rest-title .rating:hover i.fas.fa-heart {
-    animation: fillHeart 1s cubic-bezier(0.46, 0.03, 0.52, 0.96) forwards;
+  main.menu-container section.rest-title .rating:hover i.fas.fa-heart.back {
+    animation: fillHeart 2s cubic-bezier(0.46, 0.03, 0.52, 0.96) forwards;
     visibility: visible;
   }
-  main.menu-container section.rest-title .rating:hover i.far.fa-heart {
+  main.menu-container section.rest-title .rating:hover i.far.fa-heart.front {
     visibility: hidden;
   }
-  main.menu-container section.rest-title .rating i.far.front {
+  main.menu-container section.rest-title .rating i.far.fa-heart.front {
     visibility: visible;
     color: #919191;
   }
-  main.menu-container section.rest-title .rating i.fas.back {
+  main.menu-container section.rest-title .rating i.fas.fa-heart.back {
     visibility: hidden;
   }
   main.menu-container section.menu {
@@ -1190,14 +1196,13 @@ footer ul li a .fas {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     cursor: pointer;
     border: none;
-    background-color: #9356dc;
     color: #ffffff;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
   }
   main.menu-container section.button input[type=button]:hover {
-    background: #ae80e5;
+    background: #ff93e1;
     box-shadow: 0 4px 10px 4px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 }
@@ -1234,19 +1239,20 @@ footer ul li a .fas {
     right: 50px;
     top: 20px;
     font-size: 24px;
+    font-size: 24px;
   }
-  main.menu-container section.rest-title .rating:hover i.fas.fa-heart {
-    animation: fillHeart 1s cubic-bezier(0.46, 0.03, 0.52, 0.96) forwards;
+  main.menu-container section.rest-title .rating:hover i.fas.fa-heart.back {
+    animation: fillHeart 2s cubic-bezier(0.46, 0.03, 0.52, 0.96) forwards;
     visibility: visible;
   }
-  main.menu-container section.rest-title .rating:hover i.far.fa-heart {
+  main.menu-container section.rest-title .rating:hover i.far.fa-heart.front {
     visibility: hidden;
   }
-  main.menu-container section.rest-title .rating i.far.front {
+  main.menu-container section.rest-title .rating i.far.fa-heart.front {
     visibility: visible;
     color: #919191;
   }
-  main.menu-container section.rest-title .rating i.fas.back {
+  main.menu-container section.rest-title .rating i.fas.fa-heart.back {
     visibility: hidden;
   }
   main.menu-container section.menu {
@@ -1362,14 +1368,13 @@ footer ul li a .fas {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     cursor: pointer;
     border: none;
-    background-color: #9356dc;
     color: #ffffff;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
   }
   section.button input[type=button]:hover {
-    background: #ae80e5;
+    background: #ff93e1;
     box-shadow: 0 4px 10px 4px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 }

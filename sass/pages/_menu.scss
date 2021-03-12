@@ -11,7 +11,7 @@
     section.rest-title {
       width: 100%;
       border-radius: 30px;
-      background: $colour-darkgrey;
+      // background: $colour-darkgrey;
       position: relative;
       top: -30px;
       padding-top: 20px;
@@ -25,7 +25,7 @@
       .rating {
         position: absolute;
         right: 20px;
-        top: 20px;
+        bottom: 0px;
         font-size: 24px;
         @include rating;
       }
@@ -184,7 +184,6 @@
       justify-content: space-evenly;
       .sub-menu {
         text-align: left;
-        // flex: 1 1 45%;
         width: 45%;
 
         h3 {
