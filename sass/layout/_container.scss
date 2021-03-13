@@ -330,6 +330,13 @@
 }
 
 @include desktop {
+  div.wrapper {
+    width: $desktop-width;
+    margin-right: auto;
+    margin-left: auto;
+    opacity: 0;
+    // animation: wrapper 0.5s forwards 3s;
+  }
   @include bouncerLoader;
   main.container {
     display: flex;

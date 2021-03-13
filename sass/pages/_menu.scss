@@ -213,12 +213,18 @@
   }
 }
 @include desktop {
+  div.wrapper2 {
+    width: $desktop-width;
+    margin-right: auto;
+    margin-left: auto;
+  }
   main.menu-container {
     background: $colour-darkgrey;
     position: relative;
     @include flexCenter(column);
     justify-content: center;
     section img {
+      animation: fadeIn2 1s ease;
       object-fit: cover;
       width: 100%;
       height: 300px;

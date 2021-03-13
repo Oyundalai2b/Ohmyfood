@@ -1,10 +1,12 @@
 header {
+  width: 100%;
+  left: 20px;
   background-color: $colour-white;
   text-align: center;
   padding: 20px 10px 5px 10px;
   div.back {
     position: absolute;
-    left: 20px;
+
     a {
       text-decoration: none;
       @include textStyle($colour-icon-default, 24px, 500, 28px);

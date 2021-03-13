@@ -39,9 +39,18 @@
     transform: translate3d(0, 0, 0);
   }
 }
+
+@keyframes fadeIn2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @keyframes check {
   from {
-    transform: rotateZ(-180deg);
+    transform: rotateZ(-360deg);
   }
   to {
     transform: rotateZ(0deg);
