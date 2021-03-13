@@ -4,7 +4,7 @@
     position: relative;
     @include flexCenter(column);
     justify-content: center;
-    section img {
+    div.rest-img img {
       object-fit: cover;
       width: 100%;
     }
@@ -25,7 +25,7 @@
         @include rating;
       }
     }
-    section.menu {
+    div.menu {
       padding: 15px 15px 0px 15px;
       position: relative;
       top: -30px;
@@ -91,7 +91,7 @@
         }
       }
     }
-    section.button {
+    div.button {
       text-align: center;
       margin-bottom: 40px;
       input[type="button"] {
@@ -108,7 +108,7 @@
     position: relative;
     @include flexCenter(column);
     justify-content: center;
-    section img {
+    div.rest-img img {
       object-fit: cover;
       width: 100%;
       height: 300px;
@@ -130,7 +130,7 @@
         @include rating;
       }
     }
-    section.menu {
+    div.menu {
       padding: 15px 15px 0px 15px;
       position: relative;
       top: -30px;
@@ -202,7 +202,7 @@
         }
       }
     }
-    section.button {
+    div.button {
       text-align: center;
       margin-bottom: 40px;
       input[type="button"] {
@@ -223,7 +223,7 @@
     position: relative;
     @include flexCenter(column);
     justify-content: center;
-    section img {
+    div.rest-img img {
       animation: fadeIn2 1s ease;
       object-fit: cover;
       width: 100%;
@@ -246,7 +246,7 @@
         @include rating;
       }
     }
-    section.menu {
+    div.menu {
       padding: 15px 15px 0px 15px;
       position: relative;
       top: -30px;
@@ -317,7 +317,7 @@
       }
     }
   }
-  section.button {
+  div.button {
     text-align: center;
     margin-bottom: 40px;
     input[type="button"] {

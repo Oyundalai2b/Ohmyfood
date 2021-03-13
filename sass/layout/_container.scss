@@ -15,7 +15,7 @@
       @include textStyle($colour-white, 16px, 400, 20px);
     }
 
-    section.location {
+    div.location {
       padding: 15px;
       background-color: $colour-darkgrey;
       width: 100%;
@@ -174,7 +174,7 @@
       @include textStyle($colour-white, 16px, 400, 20px);
     }
 
-    section.location {
+    div.location {
       padding: 15px;
       background-color: $colour-darkgrey;
       width: 100%;
@@ -351,7 +351,7 @@
       @include textStyle($colour-white, 16px, 400, 20px);
     }
 
-    section.location {
+    div.location {
       padding: 15px;
       background-color: $colour-darkgrey;
       width: 100%;
